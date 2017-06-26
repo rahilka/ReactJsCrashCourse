@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Projects from './components/Projects';
+import AddProject from './components/AddProject';
 
 class App extends Component {
 	
@@ -8,8 +9,17 @@ class App extends Component {
 		super();
 	
 		this.state = {
+			projects: []
+		}
+		
+	}
+	
+	componentWillMount() {
+		//runs every time the component is rerendered
+		//if using AJAX, or fetching data somehow, here is the place to do it (either this or componentDidMount)
+		this.setState({
 			projects: [
-			
+				
 				{
 					title: 'Business Website',
 					category: 'Web Design'
@@ -22,20 +32,20 @@ class App extends Component {
 					title: 'Ecommerce Shopping Cart',
 					category: 'Web Development'
 				}
-				
+			
 			]
-		}
-		
+			
+			});
 	}
 	
-  render() {
-    return (
-      <div className="App">
-		My app
-		<Projects projects={this.state.projects} />
-      </div>
-    );
-  }
+	  render() {
+		return (
+		  <div className="App">
+			<AddProject />
+			<Projects projects={this.state.projects} />
+		  </div>
+		);
+	  }
 }
 
 export default App;
