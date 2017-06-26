@@ -16,7 +16,9 @@ class ProjectItem extends Component {
 }
 
 ProjectItem.propTypes = {
+	//eslint-disable-next-line
 	project: React.PropTypes.object,
+	//eslint-disable-next-line
 	onDelete: React.PropTypes.func
 }
 

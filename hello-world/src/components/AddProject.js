@@ -63,7 +63,9 @@ class AddProject extends Component {
 }
 
 AddProject.propTypes = {
+	//eslint-disable-next-line
 	category: React.PropTypes.array,
+	//eslint-disable-next-line
 	addProject: React.PropTypes.func
 }
 

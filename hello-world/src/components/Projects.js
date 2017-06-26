@@ -31,7 +31,9 @@ class Projects extends Component {
 }
 
 Projects.propTypes = {
+	//eslint-disable-next-line
 	projects: React.PropTypes.array,
+	//eslint-disable-next-line
 	onDelete: React.PropTypes.func
 }
 
